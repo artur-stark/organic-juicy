@@ -1,20 +1,109 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;900&family=PT+Sans&family=Secular+One&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;900&family=PT+Sans&family=Secular+One&display=swap');
 
-/*
-font-family: 'Fira Sans Condensed', sans-serif; ЗАГОЛОВКИ 300 400 900
+
+/*font-family: 'Fira Sans Condensed', sans-serif; ЗАГОЛОВКИ 300 400 900
 font-family: 'PT Sans', sans-serif; ДЛЯ ОБЫЧНОГО ТЕКСТА 400
-font-family: 'Secular One', sans-serif; ШАПКА 400
-*/
+font-family: 'Secular One', sans-serif; ШАПКА 400 */
 
-body{
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
+
+
 
 .container{
   max-width: 1920px;
   margin: 0 auto;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+/*HEADER*/
+
+.header {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr 1fr 100px;
+  grid-template-areas: "logo nav search";
+  align-items: center;
+  justify-items: start;
+
+  padding: 20px 0;
+
+  text-transform: uppercase;
+
+  overflow: hidden;
+}
+
+.header__logo {
+  grid-area: logo;
+  justify-self: end;
+
+  font-family: 'Secular One', sans-serif;
+  font-weight: 400;
+  color: #FF4747;
+  font-size: 24px;
+  width: 150px;
+  line-height: 1;
+
+  transition: color 0.2s;
+}
+
+.header__nav {
+  grid-area: nav;
+}
+
+.header__nav ul{
+  display: flex;
+  gap:10px;
+}
+
+.header__nav a{
+  padding: 15px;
+  transition: color 0.2s;
+  position: relative;
+  display: inline-block;
+}
+
+.header__nav a:hover, .header__logo:hover{
+  color: #01BCB5;
+}
+
+.header__nav a:active{
+  color: #44a7a2;
+}
+
+.header__nav a::after{
+  display: block;
+  content: "";
+  height:100%;
+  width: 80%;
+  background-color:#01BCB5;
+  position: absolute;
+  left: 15px;
+  bottom: -200%;
+
+  transition: bottom 0.5s, background-color 0.2s;
+}
+
+.header__nav a:hover::after{
+  bottom: -80%;
+}
+.header__nav a:active::after{
+  background-color: #44a7a2;
+}
+.header__search {
+  grid-area: search;
+}
+
+.header__search-icon{
+  transition: fill 0.2s;
+}
+
+.header__search-icon:hover{
+  fill: #01BCB5;
+}
+
+.header__search-icon:active{
+  fill: #44a7a2;
 }
