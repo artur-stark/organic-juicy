@@ -345,3 +345,114 @@ body {
   fill: #fff;
 }
 
+.footer__logo{
+  width: 60px;
+  grid-area: logo;
+  justify-self: center;
+}
+
+.wrapper-down {
+  display: grid;
+  grid-template-columns: 4.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "footer  sidebar";
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #2f2f2f;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
+  grid-template-rows: max-content 100px;
+  grid-template-areas: ". socials form logo" ". . . copy";
+
+  padding-top: 80px;
+  align-items: end;
+}
+
+.socials{
+  grid-area: socials;
+  display: flex;
+  gap:10px;
+  
+}
+
+.socials a{
+border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials img{
+  width: 20px;
+  height: 20px;
+}
+
+.form {
+  grid-area: form;
+
+  text-transform: uppercase;
+}
+
+.form-title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+
+}
+
+.form-row{
+  display: flex;
+}
+
+
+.form__input {
+  height: 40px;
+  width: 200px;
+  padding:0 20px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.form__submit-btn {
+  background-color: #01BCB5;
+  height: 40px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.form__submit-btn:hover {
+  background-color: #00eae0;
+}
+
+.form__submit-btn:active {
+  opacity: 0.8;
+}
+
+
+.copy {
+  grid-area: copy;
+  color:#6A6A6A;
+  justify-self: center;
+  align-self: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #01BCB5 ;
+}
+
+.btn--rounded {
+ border-radius: 20px;
+ padding-top: 7px;
+ padding-bottom: 7px;
+ margin-top: 10px;
+}
